@@ -20,6 +20,7 @@ except ValueError:
 # j counts up to number of columns for horizontal line
 # k counts up to height
 # m counts up to number of columns for vertical lines
+# n counts up to number of columns for last horizontal line
 
 i = 0
 while i < r:
@@ -27,15 +28,22 @@ while i < r:
     while j < c:
         print("+", cb * "-", sep = "", end = "")
         j += 1
-    print()
+    print("+") # last plus sign in row
     k = 0
     while k < rb:
         m = 0
         while m < c:
             print("|", cb * " ", sep = "", end = "")
             m += 1
-        print()
+        print("|") # last pipe in row
         k += 1
     i += 1
+n = 0
+while n < c:
+    print("+", cb * "-", sep = "", end = "")
+    n += 1
+print("+")
+
+
 
 sys.exit(0)
