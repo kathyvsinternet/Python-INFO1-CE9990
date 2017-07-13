@@ -30,21 +30,22 @@ day = ["first",
        "eleventh",
        "twelfth"]
 
-gift = lyrics.read().split("\n") # removes line break
+gift = lyrics.read().splitlines()
+
+lyrics.close()
 
 for n in range(len(day)):
     print("On the", day[n], "day of Christmas")
     print("my true love gave to me:")
     reverse = gift[n::-1]
-    for i in reverse:
-        if i == gift[0] and day[n] != day[0]:
-            print("and ", end = "")
-        if i == gift[0]:
-            print(i, ".", sep = "")
+    for g in reverse:
+        if g != gift[0]:
+            print(g, ",", sep = "")
         else:
-            print(i, ",", sep = "")
+            if day[n] != day[0]:
+                print("and ", end = "")
+            print(g, ".", sep = "")
     print()   
 
-lyrics.close()
 sys.exit(0)
 
