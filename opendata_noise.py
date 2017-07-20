@@ -52,7 +52,7 @@ data.close()
 if len(noise) > 0:
     print("Here are the three most recent noise complaints on ", s, " in ", b, ":", sep = "")
     print()
-    for i in range(0, len(noise), 3):
+    for i in range(0, 3):
         complaint(noise[i])
         print()
         
