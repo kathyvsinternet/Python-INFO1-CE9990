@@ -1,0 +1,42 @@
+[
+ {
+   "House": "House",
+   "Founder": "Founder",
+   "Animal": "Animal",
+   "Head": "Head",
+   "Ghost": "Ghost",
+   "Common Room": "Common Room"
+ },
+ {
+   "House": "Gryffindor",
+   "Founder": "Godric Gryffindor",
+   "Animal": "Lion",
+   "Head": "Minerva McGonagall",
+   "Ghost": "Nearly Headless Nick",
+   "Common Room": "Gryffindor Tower"
+ },
+ {
+   "House": "Hufflepuff",
+   "Founder": "Helga Hufflepuff",
+   "Animal": "Badger",
+   "Head": "Pomona Sprout",
+   "Ghost": "Fat Friar",
+   "Common Room": "Hufflepuff Basement"
+ },
+ {
+   "House": "Ravenclaw",
+   "Founder": "Rowena Raenclaw",
+   "Animal": "Eagle",
+   "Head": "Filius Flitwick",
+   "Ghost": "Grey Lady",
+   "Common Room": "Ravenclaw Tower"
+ },
+ {
+   "House": "Slytherin",
+   "Founder": "Salazar Slytherin",
+   "Animal": "Snake",
+   "Head": "Severus Snape",
+   "Ghost": "Bloody Baron",
+   "Common Room": "Slytherin Dungeon"
+ }
+]
