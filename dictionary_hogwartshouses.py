@@ -2,9 +2,7 @@
 
 dictionary_hogwartshouses.py
 
-supposed to create dictionary from JSON and prints information for any given Hogwarts house
-
-wasn't actually able to create dictionary, also seeing error in executing script where "list indices must be integers or slices, not str"
+create dictionary from JSON and prints information for any given Hogwarts house
 """
 
 import sys
@@ -42,14 +40,16 @@ print()
 house = h.lower()
 
 def details(house):
-    print(info["Founder"], "is the founder of the", h, "house.")
-    print("Its house animal is the ", info["Animal"], ".", sep = "")
-    print(info["Head"], "is head of house.")
-    print(info["Ghost"], "is the", h, "ghost.")
-    print("The ", h, " common room is ", info["Common Room"], ".", sep = "")
+    print(dictionary["Founder"], "is the founder of the", h, "house.")
+    print("Its house animal is the ", dictionary["Animal"], ".", sep = "")
+    print(dictionary["Head"], "is head of house.")
+    print(dictionary["Ghost"], "is the", h, "ghost.")
+    print("The ", h, " common room is ", dictionary["Common Room"], ".", sep = "")
     
-if house in info["House"].lower():
-    details(house)
+for dictionary in info:
+    if dictionary["House"].lower() == house:
+        details(dictionary)
+        break
 else:
     print("Are you sure", h, "is a Hogwarts house?")
     sys.exit(1)
