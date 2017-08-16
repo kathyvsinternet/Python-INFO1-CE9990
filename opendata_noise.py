@@ -32,7 +32,7 @@ print()
 borough = b.lower()
 street = s.lower()
 
-noise = [] 
+noises = [] 
 for datum in data:
     try:
         string = datum.decode("utf-8")
@@ -43,17 +43,17 @@ for datum in data:
     row = csv.reader([string])
     fields = next(row)
     if fields[23].lower() == borough and street in fields[10].lower():
-        noise.append(fields)
-
-noise.sort(key = lambda row: datetime.datetime.strptime(row[1], "%m/%d/%Y %H:%M:%S %p"), reverse = True)
+        noises.append(fields)
 
 data.close()
 
-if len(noise) > 0:
-    print("Here are the three most recent noise complaints on ", s, " in ", b, ":", sep = "")
+if noises:
+    noises.sort(key = lambda row: datetime.datetime.strptime(row[1], "%m/%d/%Y %H:%M:%S %p"), reverse = True)
+    n = 3
+    print("Here are the {} most recent noise complaints on {} in {}.".format(n, s, b))
     print()
-    for i in range(0, 3):
-        complaint(noise[i])
+    for noise in noises[:n]:
+        complaint(noise)
         print()
-        
+       
 sys.exit(0)
